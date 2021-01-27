@@ -5,12 +5,9 @@ export function eventCountDownDateTime(countDownDate, eventName) {
     let distance = countDownDate - new Date().getTime();
     // Time calculations for days, hours, minutes and seconds
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x);
